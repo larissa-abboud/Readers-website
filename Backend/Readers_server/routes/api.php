@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //routes then controllers
-* v1 Routes */
+
 Route::group(['prefix' => 'v1'], function () {
 
     /* Authentication Routes */
