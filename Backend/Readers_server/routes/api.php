@@ -48,13 +48,16 @@ Route::group(['prefix' => 'v1'], function () {
          */
 
          //post
-         Route::post("createPost/{id?}", [postController::class, "createPost"]); //takes user id 
-         Route::post("updateLike/{id?}", [postController::class, "updateLikes"]);//takes id of post
-         Route::post("updatecomments/{id?}", [postController::class, "updatecomments"]);//takes id of post
-         Route::post("addComment/", [postController::class, "addComment"]); //add comment from user to a certain post
-         Route::get("displayFeed/", [postController::class, "displayPosts"]); //display all post in db
-         Route::get("displayUser/", [postController::class, "displayUser"]); //display user details (visit profile?)
-         Route::get("displayAllUsers/", [postController::class, "displayAllUsers"]); //display user details (visit profile?)
+         Route::group(['prefix' => 'posts'], function (){
+            Route::post("/createPost/{id?}", [postController::class, "createPost"]); //takes user id 
+            Route::post("/updateLike/{id?}", [postController::class, "updateLikes"]);//takes id of post
+            Route::post("/updatecomments/{id?}", [postController::class, "updatecomments"]);//takes id of post
+            Route::post("/addComment", [postController::class, "addComment"]); //add comment from user to a certain post
+            Route::get("/displayFeed", [postController::class, "displayPosts"]); //display all post in db
+            Route::get("/displayUser", [postController::class, "displayUser"]); //display user details (visit profile?)
+            Route::get("/displayAllUsers", [postController::class, "displayAllUsers"]); //display user details (visit profile?)
+         });
+         //prrofile
          
         
          
