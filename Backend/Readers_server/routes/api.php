@@ -23,6 +23,7 @@ Route::group(['prefix' => 'v1'], function () {
 
     /* Middleware for authentication */
     Route::group(['middleware' => 'auth:api'], function () {
+        
 
        //need authetication then we recive token that is used here
 
