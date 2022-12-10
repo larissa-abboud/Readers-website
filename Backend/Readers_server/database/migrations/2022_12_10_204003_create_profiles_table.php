@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
+            $table->integer("user_id");
+            $table->string("Bio");
+            $table->integer("follower");
+            $table->integer("following");
+            $table->integer("books_id");//null
+            $table->integer("genre_id");//null
             $table->timestamps();
         });
     }

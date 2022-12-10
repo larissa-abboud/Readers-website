@@ -22,7 +22,7 @@ class UserController extends Controller
 
     ]);
     if ($validator->fails()) {
-        return response()->json($validator->errors(), 202);//user needs to sign up 
+        return response()->json($validator->errors(), 202); 
     }
     if (! $token = auth()->attempt($validator->validated())) {
         return response()->json(['error' => 'Unauthorized'], 200); 
