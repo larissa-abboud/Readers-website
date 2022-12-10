@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string("Bio");
             $table->integer("follower");
             $table->integer("following");
-            $table->integer("books_id");//null
-            $table->string("Books_list");
-            $table->integer("genre_id");//null
+            $table->string("Books_list");//book names seperated by a ;
             $table->string("genres_list");
             $table->string("image_url");
             $table->timestamps();
