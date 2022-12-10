@@ -25,6 +25,27 @@ Route::group(['prefix' => 'v1'], function () {
     Route::group(['middleware' => 'auth:api'], function () {
         
 
+    });
+
+    /* User Routes */
+    Route::group(['prefix' => 'user'], function () {
+        
+        /**
+         * create post //post
+         * display all psots//get
+         * display all users//get
+         * display specific user //get
+         * update like//post
+         * udpate comment//post
+         * 
+         * edit profile//post
+         * display profile //get
+         * 
+         */
+
+ 
+
+
        //need authetication then we recive token that is used here
 
     });
