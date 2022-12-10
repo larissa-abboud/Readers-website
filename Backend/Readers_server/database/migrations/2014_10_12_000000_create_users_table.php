@@ -23,6 +23,12 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::create('followers_following', function (Blueprint $table) {
+            $table->id();
+            $table->integer("user_id");//this user
+            $table->integer("user_following_id");//followed this user
+            $table->timestamps();
+        });
     }
 
     /**
