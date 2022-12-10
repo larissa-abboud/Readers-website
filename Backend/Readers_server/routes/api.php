@@ -57,6 +57,19 @@ Route::group(['prefix' => 'v1'], function () {
             Route::get("/displayUser", [postController::class, "displayUser"]); //display user details (visit profile?)
             Route::get("/displayAllUsers", [postController::class, "displayAllUsers"]); //display user details (visit profile?)
          });
+         Route::group(['prefix' => 'profile'], function (){
+            Route::group(['prefix' => 'editprofile'], function (){
+                Route::post("/editMain", [profileController::class, "editMain"]); //bio
+                Route::post("/editGenre", [profileController::class, "editGenre"]);
+                Route::post("/editLibrary", [profileController::class, "editLibrary"]);
+
+            });
+            Route::get("/displayUserProfile", [profileController::class, "displayProfile"]);
+            //dispaly all detail 
+            
+            
+         });
+         
          //prrofile
          
         
