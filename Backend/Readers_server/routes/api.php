@@ -32,6 +32,7 @@ Route::group(['prefix' => 'v1'], function () {
         
         /**
          * create post //post
+         * (display post type to add into a list and choose from)//get
          * display all psots//get
          * display all users//get
          * display specific user //get
@@ -40,8 +41,19 @@ Route::group(['prefix' => 'v1'], function () {
          * 
          * edit profile//post
          * display profile //get
+         * add genre //post
+         * add book in library//post
          * 
          */
+
+         //post
+         Route::post("createPost/{id?}", [postController::class, "createPost"]); //takes user id 
+         Route::post("updateLike/{id?}", [postController::class, "updateLikes"]);//takes id of post
+         Route::post("updatecomments/{id?}", [postController::class, "updatecomments"]);//takes id of post
+         Route::get("displayFeed/", [postController::class, "displayPosts"]); //display all post in db
+        
+         
+
 
  
 
