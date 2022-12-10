@@ -15,7 +15,18 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->integer("user_id");
+            $table->integer("type_id");
+            $table->string("content");
+            $table->integer("likes");
+            $table->integer("comments");
             $table->timestamps();
+        });
+        Schema::create('posts_types', function (Blueprint $table) {
+            $table->id();
+            $table->string("topic");//review or prompt
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -27,5 +38,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('posts');
+        Schema::dropIfExists('posts_types');
     }
 };
