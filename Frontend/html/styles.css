@@ -1,0 +1,41 @@
+body {
+  background-image: url('/Frontend/resources/bg-main.jpg');
+}
+.container {
+  background-image: url('/Frontend/resources/bg-main.jpg');
+    background-color: firebrick;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    height: 400px;
+    top: 50%;
+    box-shadow: 0 0 3px 0;
+    background: inherit;
+   
+    margin: 100px;
+    border-radius: 25px;
+  }
+  .header {
+    color: white;
+    text-align:justify;
+    margin: 10px 40px 10px 40px;
+  }
+  .description {
+    color: white;
+    margin: 0px 40px 10px 10px;
+    direction:ltr;
+    text-align: justify;
+  }
+  .joinus {
+    background-color: transparent;
+    margin: 0px 60px 40px 40px;
+    border-radius: 25px;
+    border-color: #fff;
+    height: 30px;
+  }
