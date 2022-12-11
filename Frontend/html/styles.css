@@ -1,6 +1,6 @@
 
 body{
-  background-image: url('resources//pics/bg-main.png');
+  background-image: url('resources/bg-2.jpg');
 }
 
 
@@ -21,7 +21,7 @@ div {
     height: 300px;
     top: 70%;
     box-shadow: 0 0 8px 0;
-    background: rgb(29, 4, 4);
+    background: rgb(85, 26, 26);
     margin: 100px;
     border-radius: 10px;
     margin-right: 25%;
