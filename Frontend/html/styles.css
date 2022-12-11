@@ -22,9 +22,9 @@ div {
     top: 70%;
     box-shadow: 0 0 8px 0;
     background: rgb(29, 4, 4);
-   
     margin: 100px;
     border-radius: 10px;
+    margin-right: 25%;
   }
   .header {
     color: white;
@@ -37,17 +37,27 @@ div {
     direction:ltr;
     text-align: justify;
   }
-  .flex{
+.flex{
     display:flex;
    
 }
+
+
+.flex-wrap-rev{
+  display:flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+}
+
+
+
   .connect {
    
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
     margin: 0px 60px 40px 40px;
-    border-radius: 25px;
+    border-radius: 10px;
     border-color: rgb(131, 118, 76);
     height: 30px;
   }
