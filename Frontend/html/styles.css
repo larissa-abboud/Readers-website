@@ -37,7 +37,13 @@ div {
     direction:ltr;
     text-align: justify;
   }
+  .flex{
+    display:flex;
+   
+}
   .connect {
+   
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
     margin: 0px 60px 40px 40px;
