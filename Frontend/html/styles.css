@@ -1,21 +1,20 @@
-body {
-  background-image: url('/Frontend/resources/bg-main.jpg');
+body{
+  background-image: url('resources//pics/bg-main.png');
 }
 .container {
-  background-image: url('/Frontend/resources/bg-main.jpg');
-    background-color: firebrick;
-    background-repeat: no-repeat;
+   background-color: black;
     background-attachment: fixed;
     background-size: cover;
   }
   .page {
+    
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
     align-items: flex-start;
-    height: 400px;
-    top: 50%;
-    box-shadow: 0 0 3px 0;
+    height: 300px;
+    top: 70%;
+    box-shadow: 0 0 8px 0;
     background: inherit;
    
     margin: 100px;
@@ -32,10 +31,10 @@ body {
     direction:ltr;
     text-align: justify;
   }
-  .joinus {
-    background-color: transparent;
+  .connect {
+    background-color: whitesmoke;
     margin: 0px 60px 40px 40px;
     border-radius: 25px;
-    border-color: #fff;
+    border-color: rgb(131, 118, 76);
     height: 30px;
   }
