@@ -64,8 +64,42 @@ readers_pages.load_landing = async () => {
 
 readers_pages.load_login=()=>{
     /**
+     * take input and use api
      * 
      */
+    const btn_login = document.getElementById("login-btn");
+
+    const login = async () => {
+        const login_url = base_url + ""; //add url to login route
+    
+        const login_data = new URLSearchParams();
+        login_data.append("email", document.getElementById("email").value);
+        login_data.append("password", document.getElementById("password").value);
+        //get value
+    
+        const response = await readers_pages.postAPI(login_url, login_data);
+        /**if  missing input 
+         * if auth error
+         * else succes
+         */
+        if (response.data.Error) {
+         
+          
+        } else {
+          // Save  data in the local storage
+          const userData = [];
+          const user_id = response.data.Success.id;
+          const name = response.data.Success.name;
+          const username = response.data.Success.username;
+          const email = response.data.Success.email;
+    
+          userData.push({ user_id, name, username, email });
+          localStorage.setItem("userData", JSON.stringify(userData));
+    
+          // go to home page
+          
+        }
+      };
 
 }
 readers_pages.load_signup=()=>{
