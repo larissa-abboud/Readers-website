@@ -82,18 +82,23 @@ readers_pages.load_login=()=>{
          * if auth error
          * else succes
          */
-        if (response.data.Error) {
+        if (response.status == 400) {
+            //display error
          
-          
-        } else {
+        }else if(response.data.error) {
+            //display error
+        }
+        else {
           // Save  data in the local storage
           const userData = [];
-          const user_id = response.data.Success.id;
-          const name = response.data.Success.name;
-          const username = response.data.Success.username;
-          const email = response.data.Success.email;
+          const user_id = response.data.id;
+          const name = response.data.name;
+          const username = response.data.username;
+          const email = response.data.email;
+          const user_token = response.data.access_token;
+
     
-          userData.push({ user_id, name, username, email });
+          userData.push({ user_id, name, username, email ,user_token});
           localStorage.setItem("userData", JSON.stringify(userData));
     
           // go to home page
