@@ -58,10 +58,21 @@ readers_pages.load_landing = async () => {
     });
 
 
-    // window.location.href = "signup.html";
-
    
 
+}
+
+readers_pages.load_login=()=>{
+
+}
+readers_pages.load_signup=()=>{
+    
+}
+readers_pages.load_home=()=>{
+    
+}
+readers_pages.load_profile=()=>{
+    
 }
 
 readers_pages.load_profile = () => {
