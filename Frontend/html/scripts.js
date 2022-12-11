@@ -1,5 +1,6 @@
 const readers_pages = {};
 
+
 const base_url = "http://localhost/";
 
 readers_pages.Console = (title, values, oneValue = true) => {
@@ -43,6 +44,22 @@ readers_pages.postAPI = async (api_url, api_data, api_token = null) => {
 }
 
 readers_pages.load_landing = async () => {
+    /**
+     * redirect to sign up or login
+     * 
+     */
+    const btn_signup = document.getElementById("signup");
+    const btn_login = document.getElementById("login");
+    btn_login.addEventListener("click", function(){
+        window.location.href = "login.html";
+    });
+    btn_signup.addEventListener("click", function(){
+        window.location.href = "signup.html";
+    });
+
+
+    // window.location.href = "signup.html";
+
    
 
 }
