@@ -1,13 +1,19 @@
+
 body{
   background-image: url('resources//pics/bg-main.png');
 }
+
+
+div {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container {
-   background-color: black;
+   
     background-attachment: fixed;
     background-size: cover;
   }
   .page {
-    
+   
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -15,10 +21,10 @@ body{
     height: 300px;
     top: 70%;
     box-shadow: 0 0 8px 0;
-    background: inherit;
+    background: rgb(29, 4, 4);
    
     margin: 100px;
-    border-radius: 25px;
+    border-radius: 10px;
   }
   .header {
     color: white;
@@ -32,6 +38,7 @@ body{
     text-align: justify;
   }
   .connect {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: whitesmoke;
     margin: 0px 60px 40px 40px;
     border-radius: 25px;
