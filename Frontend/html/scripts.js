@@ -89,6 +89,7 @@ readers_pages.load_login=()=>{
          
         }else if(response.data.error) {
             //display error
+        
         }
         else {
           // Save  data in the local storage
@@ -107,19 +108,22 @@ readers_pages.load_login=()=>{
                 window.location.href = "home.html";
             });}
     
-          // go to home page
+          
           
         }
-      };
-    if (redirect_btn){
+      }
+      if (redirect_btn){
         redirect_btn.addEventListener("click", function(){
         window.location.href = "signup.html";
     });
+    
     }
     
 
 }
 readers_pages.load_signup=()=>{
+    const btn_signup = document.getElementById("signup-btn");
+    const redirect_btn = document.getElementById("login-redirect"); 
     const signup = async () => {
         const signup_url = base_url + "";
     
@@ -129,7 +133,7 @@ readers_pages.load_signup=()=>{
         data.append("email", document.getElementById("email").value);
         data.append("password", document.getElementById("password").value);
     
-        const response = await readers_pages.postAPI(
+        const response = await readers_pages.postAPI( //add data to db
           signup_url,
           data
         );
@@ -137,8 +141,17 @@ readers_pages.load_signup=()=>{
           //fail
         } else {
           //succes
+          if( btn_signup){
+
+            btn_signup.addEventListener("click", function(){
+                window.location.href = "home.html";
+            });}  
         }
       };
+      if (redirect_btn){
+        redirect_btn.addEventListener("click", function(){
+        window.location.href = "login.html";
+    });}
     
 }
 readers_pages.load_home=()=>{
