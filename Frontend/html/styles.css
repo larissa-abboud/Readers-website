@@ -12,7 +12,25 @@ div {
     background-attachment: fixed;
     background-size: cover;
   }
-  .page {
+.col{
+  display: flex;
+ 
+  }
+  .page1 {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    height: 300px;
+    top: 70%;
+    box-shadow: 0 0 8px 0;
+    background: rgb(85, 26, 26);
+    margin: 100px;
+    border-radius: 10px;
+   
+  }
+  .page2{
    
     display: flex;
     flex-direction: column;
@@ -25,6 +43,7 @@ div {
     margin: 100px;
     border-radius: 10px;
     margin-right: 25%;
+    margin-left: 25%;
     margin-bottom: 10%;
   }
   .header {
