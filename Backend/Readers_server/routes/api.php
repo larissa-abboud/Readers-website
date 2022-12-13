@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,13 @@ Route::group(['prefix' => 'v1'], function () {
     /* Authentication Routes */
    
 
-    Route::post('/login', [UserController::class, 'login']);
-    Route::post('/register', [UserController::class, 'register']);
-
+    Route::post('/login', [UserController::class,'login']);
+    Route::post('register', [UserController::class,'register']);
+//api worker becuase :
+/**
+ * http://127.0.0.1:8000/api/v1/register
+ * added use in composer.json
+ */
     
 
     /* Middleware for authentication */
