@@ -67,7 +67,8 @@ readers_pages.load_login=()=>{
      * take input and use api
      * 
      */
-    const btn_login = document.getElementById("login-btn");
+    const btn_login = document.getElementById("login");
+    const redirect_btn = document.getElementById("register-redirect");
 
     const login = async () => {
         const login_url = base_url + ""; //add url to login route
@@ -105,6 +106,13 @@ readers_pages.load_login=()=>{
           
         }
       };
+    if( btn_login){
+    btn_login.addEventListener("click", function(){
+        window.location.href = "home.html";
+    });}
+    redirect_btn.addEventListener("click", function(){
+        window.location.href = "signup.html";
+    });
 
 }
 readers_pages.load_signup=()=>{
