@@ -49,7 +49,7 @@ Route::group(['prefix' => 'v1'], function () {
 
          //post
          Route::group(['prefix' => 'posts'], function (){
-            Route::post("/createPost/{id?}", [postController::class, "createPost"]); //takes user id 
+            Route::post("/createPost", [postController::class, "createPost"]); 
             Route::post("/updateLike/{id?}", [actionPostController::class, "updateLikes"]);//takes id of post
             Route::post("/updatecomments/{id?}", [actionPostController::class, "updatecomments"]);//takes id of post
             Route::post("/addComment", [actionPostController::class, "addComment"]); //add comment from user to a certain post
