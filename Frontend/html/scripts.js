@@ -67,18 +67,19 @@ readers_pages.load_login=()=>{
      * take input and use api
      * 
      */
+    
     const btn_login = document.getElementById("login-btn");
     const redirect_btn = document.getElementById("register-redirect");
 
     const login = async () => {
         const login_url = base_url + ""; //add url to login route
     
-        const login_data = new URLSearchParams();
-        login_data.append("email", document.getElementById("email").value);
-        login_data.append("password", document.getElementById("password").value);
+        const data = new URLSearchParams();
+        data.append("email", document.getElementById("email").value);
+        data.append("password", document.getElementById("password").value);
         //get value
     
-        const response = await readers_pages.postAPI(login_url, login_data);
+        const response = await readers_pages.postAPI(login_url, data);
         /**if  missing input 
          * if auth error
          * else succes
@@ -119,6 +120,25 @@ readers_pages.load_login=()=>{
 
 }
 readers_pages.load_signup=()=>{
+    const signup = async () => {
+        const signup_url = base_url + "";
+    
+        const data = new URLSearchParams();
+        data.append("name", document.getElementById("name").value);
+        data.append("username", document.getElementById("username").value);
+        data.append("email", document.getElementById("email").value);
+        data.append("password", document.getElementById("password").value);
+    
+        const response = await readers_pages.postAPI(
+          signup_url,
+          data
+        );
+        if (response.data.Error) {
+          //fail
+        } else {
+          //succes
+        }
+      };
     
 }
 readers_pages.load_home=()=>{
@@ -128,6 +148,3 @@ readers_pages.load_profile=()=>{
     
 }
 
-readers_pages.load_profile = () => {
-    alert("HI FROM PROFILE PAGE");
-}
