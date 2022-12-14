@@ -73,6 +73,7 @@ readers_pages.load_login=()=>{
     const redirect_btn = document.getElementById("register-redirect");
     const res = document.getElementById("result");
     
+    
     const login = async () => {
         const login_url = base_url + "v1/login"; //add url to login route
 
@@ -144,13 +145,14 @@ readers_pages.load_signup=()=>{
     const btn_signup = document.getElementById("signup-btn");
     const redirect_btn = document.getElementById("login-redirect"); 
     const signup = async () => {
-        const signup_url = base_url + "";
+        const signup_url = base_url + "v1/register";
     
         const data = new URLSearchParams();
         data.append("name", document.getElementById("name").value);
         data.append("username", document.getElementById("username").value);
         data.append("email", document.getElementById("email").value);
         data.append("password", document.getElementById("password").value);
+        data.append("admin3");
     
         const response = await readers_pages.postAPI( //add data to db
           signup_url,
@@ -158,6 +160,7 @@ readers_pages.load_signup=()=>{
         );
         if (response.data.Error) {
           //fail
+
         } else {
           //succes
           if( btn_signup){
@@ -171,6 +174,7 @@ readers_pages.load_signup=()=>{
         redirect_btn.addEventListener("click", function(){
         window.location.href = "login.html";
     });}
+    
     
 }
 readers_pages.load_home=()=>{
