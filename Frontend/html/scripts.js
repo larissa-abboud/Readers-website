@@ -1,7 +1,7 @@
 const readers_pages = {};
 
 
-const base_url = "http://localhost/";
+const base_url = "http://127.0.0.1:8000/api/";
 
 readers_pages.Console = (title, values, oneValue = true) => {
     console.log('---' + title + '---');
@@ -70,9 +70,9 @@ readers_pages.load_login=()=>{
     
     const btn_login = document.getElementById("login-btn");
     const redirect_btn = document.getElementById("register-redirect");
-
+    const res = document.getElementById("result");
     const login = async () => {
-        const login_url = base_url + ""; //add url to login route
+        const login_url = base_url + "v1/login"; //add url to login route
     
         const data = new URLSearchParams();
         data.append("email", document.getElementById("email").value);
