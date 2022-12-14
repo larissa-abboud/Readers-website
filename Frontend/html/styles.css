@@ -140,3 +140,27 @@ div {
     text-decoration: none;
     color: white;
   }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 5px 5%;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-left .home{
+    
+    display: inline-block;
+    cursor: pointer;
+}
+.nav-left .post{
+    display: inline-block;
+    cursor: pointer;
+}
