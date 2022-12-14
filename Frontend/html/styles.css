@@ -166,6 +166,8 @@ div {
 }
 
 .basic_box {
+  display: flex;
+  justify-content: flex-start;
   background-color: black;
   color: var(--color-text);
   margin-bottom: 32px;
@@ -178,4 +180,8 @@ div {
 .feed{
   margin-left: 25%;
   margin-right: 25%;
+}
+.creat{
+  margin-left: 0%;
+  margin-right: 75%;
 }
