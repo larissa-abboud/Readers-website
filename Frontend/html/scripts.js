@@ -68,11 +68,14 @@ readers_pages.load_login=()=>{
      * 
      */
     
+    
     const btn_login = document.getElementById("login-btn");
     const redirect_btn = document.getElementById("register-redirect");
     const res = document.getElementById("result");
+    
     const login = async () => {
         const login_url = base_url + "v1/login"; //add url to login route
+
     
         const data = new URLSearchParams();
         data.append("email", document.getElementById("email").value);
@@ -84,10 +87,24 @@ readers_pages.load_login=()=>{
          * if auth error
          * else succes
          */
+
+        result.innerHTML =
+            '<div id = "response" class = "result">' +
+            data +
+            "</div>";
+            
         if (response.status == 400) {
             //display error
+            result.innerHTML =
+            '<div id = "response" class = "result">' +
+            'missing input' +
+            "</div>";
          
         }else if(response.data.error) {
+            res.innerHTML =
+            '<div id = "response" class = "result">' +
+            'error' +
+            "</div>";
             //display error
         
         }
@@ -112,6 +129,8 @@ readers_pages.load_login=()=>{
           
         }
       }
+      //
+      
       if (redirect_btn){
         redirect_btn.addEventListener("click", function(){
         window.location.href = "signup.html";
