@@ -21,8 +21,8 @@ Route::group(['prefix' => 'v1'], function () {
     Route::post('register', [UserController::class,'register']);
 //api worker becuase :
 /**
- * http://127.0.0.1:8000/api/v1/register
- * added use in composer.json
+ * http://127.0.0.1:8000/api/
+ * added use in composer.json for the jwt token
  */
     
 

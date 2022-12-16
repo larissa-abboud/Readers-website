@@ -18,7 +18,7 @@ class UserController extends Controller
     $validator = Validator::make($request->all(), [
         'email' => 'required|email',
         'password' => 'required|string',
-        //add attributes
+        
 
     ]);
     if ($validator->fails()) {
@@ -55,13 +55,13 @@ public function register(Request $request){
     if($user->save()){
         return response()->json([
             'success' => true,
-            'message' => 'User created successfully',
+            'message' => 'Success',
             'data' => $user
         ], 201);
     }else{
         return response()->json([
             'success' => false,
-            'message' => 'User could not be created',
+            'message' => 'Fail',
         ], 400);
     }
 
