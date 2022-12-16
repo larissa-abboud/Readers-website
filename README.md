@@ -1,5 +1,5 @@
 # Readers-website
-# Social-Media-Web-App
+
 ## Project
 * Fall 2022 semester
 * Web application course
@@ -12,9 +12,9 @@ Additionally user have library list to share with others and chatbox option to c
 ## Database:
 * using MYSQL
 * design:
-* ####  Tables: users , posts ,post_types , profile
-* ####  Relations : the user posts can be of 2 categories(review ,prompt ). 
-  #### each profile contains a list of genres the user prefers and library (list of books they like).
+  ####  Tables: users , posts ,post_types , profile
+  ####  Relations : the user posts can be of 2 categories(review ,prompt ). 
+     #### each profile contains a list of genres the user prefers and library (list of books they like).
 ## Stacks:
 * Laravel
 * REST API
