@@ -67,6 +67,8 @@ Route::group(['prefix' => 'v1'], function () {
                 Route::post("/editMain", [profileController::class, "editMain"]); //bio
                 Route::post("/editGenre", [profileController::class, "editGenre"]);
                 Route::post("/editLibrary", [profileController::class, "editLibrary"]);
+                //follower increase
+                //following increase
 
             });
             Route::get("/displayUserProfile", [profileController::class, "displayProfile"]);

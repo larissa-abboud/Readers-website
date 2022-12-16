@@ -13,7 +13,7 @@ class UserController extends Controller
 //regsiter  
 //both need to be authenticated
 //save acces token after log in
- public function login(Request $request) {
+ function login(Request $request) {
 
     $validator = Validator::make($request->all(), [
         'email' => 'required|email',
@@ -37,7 +37,7 @@ class UserController extends Controller
         'expires_in' => auth()->factory()->getTTL() * 60
     ]);
 }
-public function register(Request $request){
+function register(Request $request){
     $request->validate([
         'name' => 'required|string',
         'username' => 'required|string',

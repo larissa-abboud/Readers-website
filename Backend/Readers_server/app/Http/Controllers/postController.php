@@ -25,7 +25,7 @@ class postController extends Controller
     }
     
 
-    function createPost(Request $request  ){
+    function createPost(Request $request,$user_id,$type_id ){
         $post = new Post;
         
 
