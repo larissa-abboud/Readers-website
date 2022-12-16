@@ -10,12 +10,20 @@ class postController extends Controller
 
     function displayPosts(){
 
-        $users = User::all();
+        $posts = Post::all();
+
+        return response()->json([
+            "result" => $posts 
+        ]);
+    }
+    function displayAllUsers(){
+        $userss = User::all();
 
         return response()->json([
             "result" => $users 
         ]);
     }
+    
 
     function createPost(Request $request  ){
         $post = new Post;
