@@ -7,7 +7,7 @@ body{
 div {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container {
+.Main-container {
    
     background-attachment: fixed;
     background-size: cover;
@@ -99,7 +99,7 @@ div {
 
 
 
-  .connect {
+  .btn {
    
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
