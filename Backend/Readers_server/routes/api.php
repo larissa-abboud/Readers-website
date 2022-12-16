@@ -18,7 +18,8 @@ Route::group(['prefix' => 'v1'], function () {
    
 
     Route::post('/login', [UserController::class,'login']);
-    Route::post('register', [UserController::class,'register']);
+    Route::post('/register', [UserController::class,'register']);
+    
 //api worker becuase :
 /**
  * http://127.0.0.1:8000/api/
@@ -54,24 +55,25 @@ Route::group(['prefix' => 'v1'], function () {
 
          //post
          Route::group(['prefix' => 'posts'], function (){
-            Route::post("/createPost", [postController::class, "createPost"]); 
-            Route::post("/updateLike/{id?}", [actionPostController::class, "updateLikes"]);//takes id of post
-            Route::post("/updatecomments/{id?}", [actionPostController::class, "updatecomments"]);//takes id of post
-            Route::post("/addComment", [actionPostController::class, "addComment"]); //add comment from user to a certain post
-            Route::get("/displayFeed", [postController::class, "displayPosts"]); //display all post in db
-            Route::get("/displayUser", [postController::class, "displayUser"]); //display user details (visit profile?)
-            Route::get("/displayAllUsers", [postController::class, "displayAllUsers"]); //display user details (visit profile?)
+            Route::post('/createPost', [postController::class, 'createPost']); 
+            Route::post('/updateLike/{id?}', [actionPostController::class, 'updateLikes']);//takes id of post
+            Route::post('/updatecomments/{id?}', [actionPostController::class, 'updatecomments']);//takes id of post
+            Route::post('/addComment', [actionPostController::class, 'addComment']); //add comment from user to a certain post
+            Route::get('/displayFeed', [postController::class, 'displayPosts']); //display all post in db
+            Route::get('/displayUser', [postController::class, 'displayUser']); //display user details (visit profile?)
+            Route::get('/displayAllUsers', [postController::class, 'displayAllUsers']); //display user details (visit profile?)
          });
          Route::group(['prefix' => 'profile'], function (){
+            Route::post('/createProfile', [profileController::class, 'createProfile']);
             Route::group(['prefix' => 'editprofile'], function (){
-                Route::post("/editMain", [profileController::class, "editMain"]); //bio
-                Route::post("/editGenre", [profileController::class, "editGenre"]);
-                Route::post("/editLibrary", [profileController::class, "editLibrary"]);
+                Route::post('/editMain', [profileController::class, 'editMain']); //bio
+                Route::post('/editGenre', [profileController::class, 'editGenre']);
+                Route::post('/editLibrary', [profileController::class, 'editLibrary']);
                 //follower increase
                 //following increase
 
             });
-            Route::get("/displayUserProfile", [profileController::class, "displayProfile"]);
+            Route::get('/displayUserProfile', [profileController::class, 'displayProfile']);
             //dispaly all details
             
             
