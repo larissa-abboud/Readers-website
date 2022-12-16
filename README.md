@@ -16,14 +16,17 @@ Additionally user have library list to share with others and chatbox option to c
 * ####  Relations : the user posts can be of 2 categories(review ,prompt ). 
   #### each profile contains a list of genres the user prefers and library (list of books they like).
 ## Stacks:
-Laravel
-REST API
-HTML
-CSS
-JavaScript
-BCrypt
+* Laravel
+* REST API
+* HTML
+* CSS
+* JavaScript
+* BCrypt
 
 ## Sexy Features:
+* seo
+* dark-light theme
+
 
 ## schreenshots:
 
