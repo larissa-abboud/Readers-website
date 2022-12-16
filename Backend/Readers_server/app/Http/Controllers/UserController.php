@@ -21,10 +21,10 @@ class UserController extends Controller
         
 
     ]);
-    if ($validator->fails()) {
+    if ($validator->fails()) { //if missing input
         return response()->json($validator->errors(), 202); 
     }
-    if (! $token = auth()->attempt($validator->validated())) {
+    if (!$token = auth()->attempt($validator->validated())) { // if not in db
         return response()->json(['error' => 'Unauthorized'], 200); 
     }
     return $this->respondWithToken($token);
@@ -46,7 +46,6 @@ public function register(Request $request){
     ]);
 
     $user = new User;
-
     $user->name = $request->name;
     $user->username = $request->username;
     $user->email = $request->email;
