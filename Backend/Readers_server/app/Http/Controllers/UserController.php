@@ -52,7 +52,7 @@ function register(Request $request){
     $user->password = bcrypt($request->password);
 
     if($user->save()){
-        return response()->json([
+  return response()->json([
             'success' => true,
             'message' => 'Success',
             'data' => $user
@@ -63,8 +63,5 @@ function register(Request $request){
             'message' => 'Fail',
         ], 400);
     }
-
 }
-
-
 }
