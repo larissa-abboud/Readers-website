@@ -23,8 +23,7 @@ Additionally user have library list to share with others and chatbox option to c
 * BCrypt
 
 ## Sexy Features:
-* seo
-* dark-light theme
+
 
 
 ## schreenshots:
