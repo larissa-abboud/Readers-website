@@ -27,4 +27,6 @@ Additionally user have library list to share with others and chatbox option to c
 
 
 ## schreenshots:
-
+![My Image](https://github.com/larissa-abboud/Readers-website/blob/readers_beta/screenshots/page1.png)
+![My Image](https://github.com/larissa-abboud/Readers-website/blob/readers_beta/screenshots/pag2.png)
+![My Image](https://github.com/larissa-abboud/Readers-website/blob/readers_beta/screenshots/pag3.png)
