@@ -3,7 +3,7 @@
 ## Project
 * Fall 2022 semester
 * Web application course
-* social medial website that connects Readers together.
+* social medial website that connects Readers .
 ## Social Media Web Application (description)
 * This website is a website that connects book lovers who have common interests in books. 
 The user can post into 2 sections ( revie or prompt). Each post can be liked, commented .
